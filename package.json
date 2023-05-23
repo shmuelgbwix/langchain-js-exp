@@ -9,6 +9,7 @@
     "dev": "nodemon --watch src/**/*.ts --exec ts-node ./src/app.ts",
     "build": "tsc",
     "start": "node ./dist/app.js",
+    "start:dev": "yarn build && node --inspect dist/src/app.js",
     "lint": "eslint --fix --quiet src/**/*.ts",
     "format": "prettier --loglevel silent --write src/**/*.ts",
     "test": "jest",
@@ -16,7 +17,10 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "langchain": "^0.0.78",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.16"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
