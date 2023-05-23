@@ -19,6 +19,7 @@ export const runSimple = async () => {
     console.log({ err });
   }
 };
+runSimple();
 
 export const runAgent = async () => {
   try {
